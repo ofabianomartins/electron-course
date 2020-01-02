@@ -18,7 +18,27 @@
                 Get Info    
             </button>
         </div>
+        <h1 id="result">
+
+        </h1>
 
     </form>
+    <script type="text/javascript">
+        const electron = require('electron');
+        const { ipcRenderer } = electron;
+
+        document.querySelector('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const { path } = document.getElementById('videofile').files[0];
+
+            ipcRenderer.send('video:submit', path);
+
+            ipcRenderer.on('video:getlength', (event, duration) => {
+                console.log(duration);
+                document.querySelector('#result').innerHTML = `Video is ${duration} seconds`
+            });
+        })
+    </script>
 </body>
 </html>

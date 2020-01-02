@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts" : {
+  "scripts": {
     "electron": "electron ."
   },
   "dependencies": {
-    "electron": "^7.1.7"
+    "electron": "^7.1.7",
+    "fluent-ffmpeg": "^2.1.2"
   }
 }
