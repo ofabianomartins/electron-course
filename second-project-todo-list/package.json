@@ -1,0 +1,12 @@
+{
+  "name": "second-project-todo-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "electron": "electron src/"
+  },
+  "dependencies": {
+    "electron": "^7.1.7"
+  }
+}
